@@ -10,9 +10,19 @@
 
 ## โทเค็น
 
-- **ห้ามเพิ่มสี/ขนาดใหม่แบบ hardcode** — ให้เพิ่มโทเค็นใน `colors_and_type.css` แล้วอ้างอิงผ่าน CSS variable
+- **ห้ามเพิ่มสี/ขนาดใหม่แบบ hardcode** — ให้เพิ่มโทเค็นใน `ui_kits/czp-web/colors_and_type.css` แล้วอ้างอิงผ่าน CSS variable
 - การเปลี่ยนค่าโทเค็นต้อง sync กับทีม `czp-mobile` (Flutter) ก่อน
 - รัน `run_script` / สคริปต์ local เพื่อ regen `tokens.json` หลังเปลี่ยน CSS
+
+## โครงสร้างไฟล์โทเค็น
+
+| โฟลเดอร์/ไฟล์ | กลุ่มเป้าหมาย | คำอธิบาย |
+|---|---|---|
+| `tokens/tokens.json` | Dev / CI / tooling | **Source of truth** — รูปแบบ nested มี `$schema` และ `$meta` เหมาะกับ code generation และ Figma Token Studio |
+| `ui_kits/czp-web/tokens.json` | ผู้ใช้ทั่วไป / designer | Flat format ใช้งานได้เลย — key เป็น CSS variable name ตรงๆ |
+| `ui_kits/czp-web/colors_and_type.css` | ผู้ใช้ทั่วไป / dev | CSS custom properties พร้อม utility classes — copy ไปวางในโปรเจกต์ได้เลย |
+
+> **หมายเหตุ**: เมื่อแก้ไขค่าโทเค็นใดๆ ต้อง sync ทั้ง `tokens/tokens.json` และ `ui_kits/czp-web/tokens.json` ให้ตรงกัน
 
 ## คอมโพเนนต์ใหม่
 

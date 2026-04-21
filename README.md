@@ -10,11 +10,10 @@
 
 | โฟลเดอร์/ไฟล์ | คำอธิบาย |
 |---|---|
-| `colors_and_type.css` | Design tokens เป็น CSS custom properties (สี, ตัวอักษร, ระยะห่าง, มุมโค้ง, เงา) + `.t-*` utility classes |
-| `tokens.json` | โทเค็นในรูปแบบ JSON — สำหรับ Figma Token Studio / Style Dictionary |
+| `tokens/tokens.json` | Design tokens ในรูปแบบ JSON แบบ nested (มี `$schema`, `$meta`) — **source of truth** สำหรับ dev/CI/tooling และ Figma Token Studio / Style Dictionary |
+| `ui_kits/czp-web/` | ไฟล์พร้อมใช้สำหรับ download: `colors_and_type.css` (CSS custom properties + utility classes) และ `tokens.json` (flat format ใช้งานง่าย) รวมถึง React prototype |
 | `fonts/` | Anuphan 7 น้ำหนัก (Thin 100 → Bold 700) — self-hosted |
 | `docs/` | Documentation site (HTML static) — landing, foundations, components, downloads |
-| `ui_kits/czp-web/` | Interactive React prototype — Header, Hero, ServiceGrid, StatusRow, Footer, LoginModal |
 | `preview/` | Preview cards สำหรับแต่ละโทเค็น/คอมโพเนนต์ |
 | `uploads/DESIGN.md` | สเปกดีไซน์ซิสเต็มต้นฉบับ (machine-readable) |
 | `SKILL.md` | Agent skill สำหรับ Claude Code |
@@ -65,7 +64,7 @@ import "czp-design-system/colors_and_type.css";
 
 ## การใช้งานใน `czp-mobile` (Flutter)
 
-ใช้ค่าจาก `tokens.json` โดยตรง — โทเค็นชุดเดียวกันบังคับความสอดคล้องระหว่าง platform
+ใช้ค่าจาก `ui_kits/czp-web/tokens.json` โดยตรง — โทเค็นชุดเดียวกันบังคับความสอดคล้องระหว่าง platform
 
 ---
 
