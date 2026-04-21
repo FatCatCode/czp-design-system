@@ -1,5 +1,5 @@
-/* CZP Docs — site-wide CSS. Loads tokens from ../colors_and_type.css. */
-@import url("../colors_and_type.css");
+/* CZP Docs — site-wide CSS. Loads tokens from ../ui_kits/czp-web/colors_and_type.css. */
+@import url("../ui_kits/czp-web/colors_and_type.css");
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }

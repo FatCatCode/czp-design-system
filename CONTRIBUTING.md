@@ -10,7 +10,8 @@
 
 ## โทเค็น
 
-- **ห้ามเพิ่มสี/ขนาดใหม่แบบ hardcode** — ให้เพิ่มโทเค็นใน `colors_and_type.css` แล้วอ้างอิงผ่าน CSS variable
+- **ห้ามเพิ่มสี/ขนาดใหม่แบบ hardcode** — ให้เพิ่มโทเค็นใน `ui_kits/czp-web/colors_and_type.css` แล้วอ้างอิงผ่าน CSS variable
+- **`ui_kits/czp-web/colors_and_type.css` คือ source of truth เพียงที่เดียว** สำหรับ web CSS tokens — ไม่มีสำเนาที่ root อีกต่อไป
 - การเปลี่ยนค่าโทเค็นต้อง sync กับทีม `czp-mobile` (Flutter) ก่อน
 - รัน `run_script` / สคริปต์ local เพื่อ regen `tokens.json` หลังเปลี่ยน CSS
 

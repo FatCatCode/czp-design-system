@@ -10,7 +10,7 @@
 
 | โฟลเดอร์/ไฟล์ | คำอธิบาย |
 |---|---|
-| `colors_and_type.css` | Design tokens เป็น CSS custom properties (สี, ตัวอักษร, ระยะห่าง, มุมโค้ง, เงา) + `.t-*` utility classes |
+| `ui_kits/czp-web/colors_and_type.css` | Design tokens เป็น CSS custom properties (สี, ตัวอักษร, ระยะห่าง, มุมโค้ง, เงา) + `.t-*` utility classes |
 | `tokens.json` | โทเค็นในรูปแบบ JSON — สำหรับ Figma Token Studio / Style Dictionary |
 | `fonts/` | Anuphan 7 น้ำหนัก (Thin 100 → Bold 700) — self-hosted |
 | `docs/` | Documentation site (HTML static) — landing, foundations, components, downloads |
@@ -51,7 +51,7 @@ netlify deploy --prod --dir=.
 
 ```ts
 // app/layout.tsx
-import "czp-design-system/colors_and_type.css";
+import "czp-design-system/ui_kits/czp-web/colors_and_type.css";
 ```
 
 ```css

@@ -8,7 +8,7 @@ High-fidelity React recreation of the Citizen Portal (CZP Web) marketing + dashb
 - `sections.jsx` — `Header`, `Hero`, `ServiceGrid`, `StatusRow`, `Footer`, `LoginModal`
 
 ## Tokens
-All colors / typography / spacing / radii come from `../../colors_and_type.css` (CSS vars). Values are mirrored inline in JSX where convenient.
+All colors / typography / spacing / radii come from `colors_and_type.css` in this directory (CSS vars). Values are mirrored inline in JSX where convenient.
 
 ## Known simplifications
 - Not using real shadcn/Radix — these are cosmetic recreations (no focus trap, portal, etc.)
